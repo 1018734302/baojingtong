@@ -1,0 +1,31 @@
+package com.baoxian.common;
+
+import lombok.Data;
+
+/** 统一响应包装 */
+@Data
+public class R<T> {
+
+    private int code;
+    private String message;
+    private T data;
+
+    public static <T> R<T> ok(T data) {
+        R<T> r = new R<>();
+        r.code = 0;
+        r.message = "ok";
+        r.data = data;
+        return r;
+    }
+
+    public static <T> R<T> ok() {
+        return ok(null);
+    }
+
+    public static <T> R<T> fail(String message) {
+        R<T> r = new R<>();
+        r.code = 1;
+        r.message = message;
+        return r;
+    }
+}

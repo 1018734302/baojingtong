@@ -1,0 +1,24 @@
+# build output
+target/
+*.class
+
+# runtime data (H2 file db)
+data/
+*.log
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# local temp / tooling artifacts
+_p1/
+_p2/
+_p3/
+_edge_profile*/
+_*.ps1
+_*.json
+_*.txt
+*.docx
+*.pdf
+~$*
